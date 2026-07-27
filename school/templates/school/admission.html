@@ -1,0 +1,79 @@
+{% extends 'school/base.html' %}
+
+{% block title %}Admissions Open 2026 | EduTrack{% endblock %}
+
+{% block content %}
+<main class="admission-page">
+    <section class="page-hero admission-hero">
+        <div class="container position-relative">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-4">
+                    <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Admissions</li>
+                </ol>
+            </nav>
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <span class="hero-kicker"><i class="bi bi-stars"></i> Academic Year 2026</span>
+                    <h1>Admissions Open 2026</h1>
+                    <p>Complete the admission form below and our admission officer will review your application.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="form-section">
+        <div class="container">
+            <div class="admission-card mx-auto">
+                <div class="admission-card-header">
+                    <div class="step-badge">01</div>
+                    <div><h2>Student Admission Form</h2><p>Fields marked <span class="required-mark">*</span> are required.</p></div>
+                </div>
+                <form method="post" class="admission-form" novalidate>
+                    {% csrf_token %}
+                    <section class="form-group-section" aria-labelledby="personal-information">
+                        <h3 id="personal-information"><span class="section-heading-icon blue"><i class="bi bi-person"></i></span>Personal Information</h3>
+                        <div class="row g-4">
+                            <div class="col-md-6"><div class="form-floating">{{ form.first_name }}<label for="{{ form.first_name.id_for_label }}">First Name <span class="required-mark">*</span></label></div>{{ form.first_name.errors }}</div>
+                            <div class="col-md-6"><div class="form-floating">{{ form.last_name }}<label for="{{ form.last_name.id_for_label }}">Last Name <span class="required-mark">*</span></label></div>{{ form.last_name.errors }}</div>
+                            <div class="col-md-6"><div class="form-floating">{{ form.date_of_birth }}<label for="{{ form.date_of_birth.id_for_label }}">Date of Birth <span class="required-mark">*</span></label></div>{{ form.date_of_birth.errors }}</div>
+                            <div class="col-md-6"><div class="form-floating">{{ form.gender }}<label for="{{ form.gender.id_for_label }}">Gender <span class="required-mark">*</span></label></div>{{ form.gender.errors }}</div>
+                        </div>
+                    </section>
+
+                    <section class="form-group-section" aria-labelledby="contact-information">
+                        <h3 id="contact-information"><span class="section-heading-icon sky"><i class="bi bi-envelope"></i></span>Contact Information</h3>
+                        <div class="row g-4">
+                            <div class="col-md-6"><div class="form-floating">{{ form.email }}<label for="{{ form.email.id_for_label }}">Email Address <span class="required-mark">*</span></label></div>{{ form.email.errors }}</div>
+                            <div class="col-md-6"><div class="form-floating">{{ form.phone }}<label for="{{ form.phone.id_for_label }}">Phone Number <span class="required-mark">*</span></label></div>{{ form.phone.errors }}</div>
+                        </div>
+                    </section>
+
+                    <section class="form-group-section" aria-labelledby="parent-information">
+                        <h3 id="parent-information"><span class="section-heading-icon gold"><i class="bi bi-people"></i></span>Parent Information</h3>
+                        <div class="row g-4">
+                            <div class="col-md-6"><div class="form-floating">{{ form.father_name }}<label for="{{ form.father_name.id_for_label }}">Father's Name <span class="required-mark">*</span></label></div>{{ form.father_name.errors }}</div>
+                            <div class="col-md-6"><div class="form-floating">{{ form.mother_name }}<label for="{{ form.mother_name.id_for_label }}">Mother's Name <span class="required-mark">*</span></label></div>{{ form.mother_name.errors }}</div>
+                        </div>
+                    </section>
+
+                    <section class="form-group-section" aria-labelledby="academic-information">
+                        <h3 id="academic-information"><span class="section-heading-icon purple"><i class="bi bi-book"></i></span>Academic Information</h3>
+                        <div class="row g-4"><div class="col-md-6"><div class="form-floating">{{ form.grade }}<label for="{{ form.grade.id_for_label }}">Select Grade <span class="required-mark">*</span></label></div>{{ form.grade.errors }}</div></div>
+                    </section>
+
+                    <section class="form-group-section mb-0" aria-labelledby="additional-information">
+                        <h3 id="additional-information"><span class="section-heading-icon mint"><i class="bi bi-chat-left-text"></i></span>Additional Information</h3>
+                        <div class="form-floating">{{ form.remarks }}<label for="{{ form.remarks.id_for_label }}">Remarks <span class="text-muted">(Optional)</span></label></div>{{ form.remarks.errors }}
+                    </section>
+
+                    <div class="form-actions d-flex flex-column flex-sm-row justify-content-end gap-3">
+                        <button type="reset" class="btn btn-light btn-reset">Reset Form</button>
+                        <button type="submit" class="btn btn-primary btn-submit">Apply for Admission <i class="bi bi-arrow-right ms-2"></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}

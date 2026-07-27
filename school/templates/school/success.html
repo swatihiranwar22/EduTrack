@@ -1,0 +1,57 @@
+{% extends 'school/base.html' %}
+
+{% block title %}Application Submitted | EduTrack{% endblock %}
+
+{% block content %}
+<main class="success-page">
+    <section class="success-hero">
+        <div class="container">
+            <div class="success-intro text-center mx-auto">
+                <div class="success-icon"><i class="bi bi-check2"></i></div>
+                <span class="hero-kicker"><i class="bi bi-shield-check"></i> Application received</span>
+                <h1>Application Submitted Successfully</h1>
+                <p>Thank you for choosing EduTrack.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="success-content">
+        <div class="container">
+            <div class="row justify-content-center g-4">
+                <div class="col-lg-8">
+                    <article class="summary-card">
+                        <div class="summary-card-header"><h2>Application Summary</h2><span class="status-pill"><i class="bi bi-check-circle-fill"></i> Submitted</span></div>
+                        <dl class="application-summary mb-0">
+                            <div><dt>Application Number</dt><dd>{{ application.application_no }}</dd></div>
+                            <div><dt>Student Name</dt><dd>{{ application.first_name }} {{ application.last_name }}</dd></div>
+                            <div><dt>Applied Grade</dt><dd>{{ application.grade }}</dd></div>
+                            <div><dt>Current Status</dt><dd><span class="status-pill status-inline"><i class="bi bi-check-circle-fill"></i> Submitted</span></dd></div>
+                        </dl>
+                    </article>
+
+                    <aside class="submission-note" aria-label="What happens next">
+                        <div class="note-illustration"><i class="bi bi-envelope-paper-heart"></i></div>
+                        <div><h2>What happens next?</h2><p>Your application has been successfully submitted. Our admission officer will verify your documents and review your application. You will receive further communication via your registered email address.</p><p class="mb-0">Thank you for choosing EduTrack.</p></div>
+                    </aside>
+
+                    <div class="success-actions d-flex flex-column flex-sm-row gap-3 justify-content-center">
+                        <a class="btn btn-primary btn-submit" href="{% url 'home' %}"><i class="bi bi-house-door me-2"></i>Return Home</a>
+                        <button class="btn btn-outline-secondary" type="button" disabled><i class="bi bi-clock-history me-2"></i>Track Application</button>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <aside class="timeline-card">
+                        <h2>Application Progress</h2>
+                        <ol class="application-timeline list-unstyled mb-0">
+                            <li class="complete"><span><i class="bi bi-check-lg"></i></span><div><strong>Application Submitted</strong><small>We have received your application.</small></div></li>
+                            <li><span></span><div><strong>Under Review</strong><small>Documents will be verified.</small></div></li>
+                            <li><span></span><div><strong>Approved</strong><small>Admission decision is shared.</small></div></li>
+                            <li><span></span><div><strong>Student Enrolment</strong><small>Welcome to EduTrack.</small></div></li>
+                        </ol>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}
