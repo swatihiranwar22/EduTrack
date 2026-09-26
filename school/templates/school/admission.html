@@ -34,37 +34,37 @@
                     <section class="form-group-section" aria-labelledby="personal-information">
                         <h3 id="personal-information"><span class="section-heading-icon blue"><i class="bi bi-person"></i></span>Personal Information</h3>
                         <div class="row g-4">
-                            <div class="col-md-6"><div class="form-floating">{{ form.first_name }}<label for="{{ form.first_name.id_for_label }}">First Name <span class="required-mark">*</span></label></div>{{ form.first_name.errors }}</div>
-                            <div class="col-md-6"><div class="form-floating">{{ form.last_name }}<label for="{{ form.last_name.id_for_label }}">Last Name <span class="required-mark">*</span></label></div>{{ form.last_name.errors }}</div>
-                            <div class="col-md-6"><div class="form-floating">{{ form.date_of_birth }}<label for="{{ form.date_of_birth.id_for_label }}">Date of Birth <span class="required-mark">*</span></label></div>{{ form.date_of_birth.errors }}</div>
-                            <div class="col-md-6"><div class="form-floating">{{ form.gender }}<label for="{{ form.gender.id_for_label }}">Gender <span class="required-mark">*</span></label></div>{{ form.gender.errors }}</div>
+                            <div class="col-md-6"><div class="field-group"><label for="{{ form.first_name.id_for_label }}">First Name <span class="required-mark">*</span></label>{{ form.first_name }}</div>{{ form.first_name.errors }}</div>
+                            <div class="col-md-6"><div class="field-group"><label for="{{ form.last_name.id_for_label }}">Last Name <span class="required-mark">*</span></label>{{ form.last_name }}</div>{{ form.last_name.errors }}</div>
+                            <div class="col-md-6"><div class="field-group"><label for="{{ form.date_of_birth.id_for_label }}">Date of Birth <span class="required-mark">*</span></label>{{ form.date_of_birth }}</div>{{ form.date_of_birth.errors }}</div>
+                            <div class="col-md-6"><div class="field-group"><label for="{{ form.gender.id_for_label }}">Gender <span class="required-mark">*</span></label>{{ form.gender }}</div>{{ form.gender.errors }}</div>
                         </div>
                     </section>
 
                     <section class="form-group-section" aria-labelledby="contact-information">
                         <h3 id="contact-information"><span class="section-heading-icon sky"><i class="bi bi-envelope"></i></span>Contact Information</h3>
                         <div class="row g-4">
-                            <div class="col-md-6"><div class="form-floating">{{ form.email }}<label for="{{ form.email.id_for_label }}">Email Address <span class="required-mark">*</span></label></div>{{ form.email.errors }}</div>
-                            <div class="col-md-6"><div class="form-floating">{{ form.phone }}<label for="{{ form.phone.id_for_label }}">Phone Number <span class="required-mark">*</span></label></div>{{ form.phone.errors }}</div>
+                            <div class="col-md-6"><div class="field-group"><label for="{{ form.email.id_for_label }}">Email Address <span class="required-mark">*</span></label>{{ form.email }}</div>{{ form.email.errors }}</div>
+                            <div class="col-md-6"><div class="field-group"><label for="{{ form.phone.id_for_label }}">Phone Number <span class="required-mark">*</span></label>{{ form.phone }}</div>{{ form.phone.errors }}</div>
                         </div>
                     </section>
 
                     <section class="form-group-section" aria-labelledby="parent-information">
                         <h3 id="parent-information"><span class="section-heading-icon gold"><i class="bi bi-people"></i></span>Parent Information</h3>
                         <div class="row g-4">
-                            <div class="col-md-6"><div class="form-floating">{{ form.father_name }}<label for="{{ form.father_name.id_for_label }}">Father's Name <span class="required-mark">*</span></label></div>{{ form.father_name.errors }}</div>
-                            <div class="col-md-6"><div class="form-floating">{{ form.mother_name }}<label for="{{ form.mother_name.id_for_label }}">Mother's Name <span class="required-mark">*</span></label></div>{{ form.mother_name.errors }}</div>
+                            <div class="col-md-6"><div class="field-group"><label for="{{ form.father_name.id_for_label }}">Father's Name <span class="required-mark">*</span></label>{{ form.father_name }}</div>{{ form.father_name.errors }}</div>
+                            <div class="col-md-6"><div class="field-group"><label for="{{ form.mother_name.id_for_label }}">Mother's Name <span class="required-mark">*</span></label>{{ form.mother_name }}</div>{{ form.mother_name.errors }}</div>
                         </div>
                     </section>
 
                     <section class="form-group-section" aria-labelledby="academic-information">
                         <h3 id="academic-information"><span class="section-heading-icon purple"><i class="bi bi-book"></i></span>Academic Information</h3>
-                        <div class="row g-4"><div class="col-md-6"><div class="form-floating">{{ form.grade }}<label for="{{ form.grade.id_for_label }}">Select Grade <span class="required-mark">*</span></label></div>{{ form.grade.errors }}</div></div>
+                        <div class="row g-4"><div class="col-md-6"><div class="field-group"><label for="{{ form.grade.id_for_label }}">Select Grade <span class="required-mark">*</span></label>{{ form.grade }}</div>{{ form.grade.errors }}</div></div>
                     </section>
 
                     <section class="form-group-section mb-0" aria-labelledby="additional-information">
                         <h3 id="additional-information"><span class="section-heading-icon mint"><i class="bi bi-chat-left-text"></i></span>Additional Information</h3>
-                        <div class="form-floating">{{ form.remarks }}<label for="{{ form.remarks.id_for_label }}">Remarks <span class="text-muted">(Optional)</span></label></div>{{ form.remarks.errors }}
+                        <div class="field-group"><label for="{{ form.remarks.id_for_label }}">Remarks <span class="text-muted">(Optional)</span></label>{{ form.remarks }}</div>{{ form.remarks.errors }}
                     </section>
 
                     <div class="form-actions d-flex flex-column flex-sm-row justify-content-end gap-3">

@@ -1,0 +1,48 @@
+{% extends 'school/base.html' %}
+
+{% block title %}Admission Officer Login | EduTrack{% endblock %}
+
+{% block content %}
+<main class="officer-login-page">
+    <section class="officer-login-shell">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-sm-10 col-md-8 col-lg-6 col-xl-5">
+                    <section class="officer-login-card" aria-labelledby="login-title">
+                        <div class="login-card-accent"></div>
+                        <div class="login-brand-icon" aria-hidden="true"><i class="bi bi-person-badge-fill"></i></div>
+                        <p class="login-kicker"><i class="bi bi-shield-check"></i> Secure staff portal</p>
+                        <h1 id="login-title">Admission Officer Login</h1>
+                        <p class="login-subtitle">Sign in to review and manage student admission applications.</p>
+
+                        <form class="login-visual-form" aria-label="Admission officer login form">
+                            <!-- Replace this visual field area with your Django AuthenticationForm username field. -->
+                            <div class="login-field">
+                                <label for="login-username">Username</label>
+                                <div class="login-input-wrap">
+                                    <i class="bi bi-person"></i>
+                                    <input id="login-username" type="text" name="username" placeholder="Enter your username" autocomplete="username">
+                                </div>
+                            </div>
+
+                            <!-- Replace this visual field area with your Django AuthenticationForm password field. -->
+                            <div class="login-field">
+                                <label for="login-password">Password</label>
+                                <div class="login-input-wrap">
+                                    <i class="bi bi-lock"></i>
+                                    <input id="login-password" type="password" name="password" placeholder="Enter your password" autocomplete="current-password">
+                                </div>
+                            </div>
+
+                            <!-- Connect this button to your Django form submission when you add authentication logic. -->
+                            <button class="btn btn-primary login-submit" type="button">Login <i class="bi bi-arrow-right ms-2"></i></button>
+                        </form>
+
+                        <div class="login-card-footer"><i class="bi bi-info-circle"></i><span>For authorized EduTrack admission staff only.</span></div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}
